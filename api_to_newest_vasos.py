@@ -62,7 +62,16 @@ print("\nTotal number of counties: " + str(len(counties_list)))
 albemarle = counties_list[0]
 print("\nFirst County: ", albemarle)
 
+# returns the id of albemarle
+#albemarle_id = albemarle.key()
+#print("Albemarle I.D. number: " + albemarle_id)
 
+for key, value in albemarle.items():
+    print("\nID: " + str(value))
+
+# returns county id for first five items
+##for ids in counties_dict[0:5]:
+##    print
 
 
 
