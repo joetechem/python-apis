@@ -31,9 +31,12 @@ print("Status Code:", r.status_code)
     # The API returns the ino in JSON format, so we use the json() method
     # to convert the information to a Python dictionary.
     # store the resulting dictionary in response_dict.
-response_dict = r.json()
+counties_list = r.json()
+print(counties_list)
 
-# The vasos json is nested dictionaries in a list
+### The vasos json is nested dictionaries in a list   ###
+### Each county has own dictionary containing id and name ###
+### nested inside the list, counties_dict. ###
 
 """
 Creating Small Test Case
@@ -43,14 +46,33 @@ Creating Small Test Case
 
     Process:
     Create a function to..
+    - *Assign each item (dictionary for every county) in the list a variable name?
     - specify index position of called county,
-    - print called county id --> 
-    
+    - print called county id --> [0] and name --> .....*come back to this
+
+
+    Thoughts: would one need to create a variable for each dictionary(county)?
 
     
 """
-repo_dict = response_dict[0]
-print(repo_dict)
+# returns total number of counties
+print("\nTotal number of counties: " + str(len(counties_list)))
+
+# returns the first dictionary in the list
+albemarle = counties_list[0]
+print("\nFirst County: ", albemarle)
+
+
+
+
+
+
+
+
+
+
+#county_dict_item = counties_list[0]
+#print(county_dict_item)
 
 # Process results.
 #print(response_dict.keys())
