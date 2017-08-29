@@ -39,14 +39,14 @@ print(counties_list)
 ### nested inside the list, counties_dict. ###
 
 """
-Creating Small Test Case
+Creating *rough* Test Case
     Logic:
     User asks for County I.D. and # of Sites within that county
     County to be tested = Albemarle
 
     Process:
     Create a function to..
-    - *Assign each item (dictionary for every county) in the list a variable name?
+    - *Assign each item (dictionary for every county) in the list a variable name? Use a loop for this?
     - specify index position of called county,
     - print called county id --> [0] and name --> .....*come back to this
 
@@ -62,19 +62,38 @@ print("\nTotal number of counties: " + str(len(counties_list)))
 albemarle = counties_list[0]
 print("\nFirst County: ", albemarle)
 
-# returns the id of albemarle
+### returns the id of albemarle
 #albemarle_id = albemarle.key()
 #print("Albemarle I.D. number: " + albemarle_id)
 
-for key, value in albemarle.items():
-    print("\nID: " + str(value))
+### loops through keys and values
+#for key, value in albemarle.items():
+#    print("\nID: " + str(value))
+#    print("\nName: " + str(key))
 
-# returns county id for first five items
-##for ids in counties_dict[0:5]:
-##    print
+#for identity, number in albemarle.items():
+#    print(identity + "number for county, Albemarle is " + str(number))
+
+### returns county id for first five items
+#for ids in counties_dict[0:5]:
+#    print
 
 
+### Cycles through the keys of Albemarle
+print("\n")
+user_called = ['id', 'name']
+for id in albemarle.keys():
+    print(id)
 
+### Cycles through the Values of Albemarle
+print("\n")
+#user_called = ['id', 'name']
+for id in albemarle.values():
+    print("County Id:", id)
+    
+### Simple Dictionary Access
+print("\nCounty id: " + str(albemarle['id']))
+print("County name: " + str(albemarle['name']))
 
 
 
