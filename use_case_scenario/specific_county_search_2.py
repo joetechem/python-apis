@@ -17,6 +17,23 @@ User searches for how many:
 
 """
 
+input_1 = raw_input("What county would you like to search the id for? ")
+
+if input_1 == 'albemarle':
+
+    url = 'https://wva-dev.sosdata.org/counties.json'
+    r = requests.get(url)
+    counties_list = r.json()
+
+
+    if key in counties_list
+    
+    county = input_1
+
+    print("\nReturned County name and id:")
+    print("\tCounty id: " + str(county['id']))
+    
+
 # call to counties data
 print("\n")
 print("- " * 10)
