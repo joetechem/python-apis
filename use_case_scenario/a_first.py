@@ -1,7 +1,5 @@
 import requests
 import json
-import itertools
-from itertools import izip
 
 # Make an API call and store the response.
     # store the URL of the API call.
@@ -42,7 +40,7 @@ print("\tCounty id: " + str(albemarle['id']))
 print("\tCounty name: " + str(albemarle['name']))
 
 
-""" Retreieve stream count for county """
+""" Retreieve streams for county """
 
 streams_url = 'https://wva-dev.sosdata.org/streams.json'
 r2 = requests.get(streams_url)
@@ -50,17 +48,17 @@ print("Status Code:", r2.status_code)
 streams_list = r2.json()
 print(streams_list)
 
-# convert list into dictionary?
-#streams_dict = dict(itertools.izip_longest(*[iter(streams_list)] * 2, fillvalue=""))
-
+# Simple test to find stream in Albemarle county
 for stream in streams_list:
     if stream["name"] == "Buck Mountain Creek":
         print("yes")
+        
 
 
 for streams in streams_list[0:41]:
-    print(streams)
-
+    # returning all streams
+    # print(streams)
+    [d['Meadow Creek'] for d in streams_list if 'Meadow Creek' in d]
 
 #for key, value in streams_dict.items():
 #    print("\nKey: " + key)
