@@ -7,9 +7,9 @@ Objective: create a python client (or node.js) to take a county or stream
             or stream id, then use something like this...
             https://wva-dev.sosdata.org/sites.json?association=sites&parent_scaffold=streams&stream_id=197
             to look up the sites.
-
+            
+Current py File: Somewhat sporadic tests at processing data; however, with objective in mind.
 """
-
 
 # depends
 import requests
