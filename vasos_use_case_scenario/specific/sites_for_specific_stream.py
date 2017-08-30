@@ -61,17 +61,20 @@ buck_site_data()
 
 ##active = True
 ##while active:
+##    
 ##    user_says_2 = raw_input("\nType 'a' to show site data for BKM01" +
 ##                        ", 'b' for BKU03" +
 ##                        ", or 'c' for BKM1" +
 ##                        ", 'q' to quit: ")
 ##    if user_says_2 == 'a':
-##        buck_mtn_creek = [d for d in sites if d['station_identifier'] == 'BKM01']
-##        for id, station, metric, eco in sorted([(d['id'],d['station_identifier'],d['multi_metric_score'],d['ecological_conditions']) for d in buck_mtn_creek], key=lambda t:t[1]):
+##        #BKM = buck_mtn_sites_data[0]
+##        #buck_mtn_creek = [d for d in sites if d['station_identifier'] == 'BKM01']
+##        
+##        for id, station, metric, eco in sorted([(d['id'],d['station_identifier'],d['multi_metric_score'],d['ecological_conditions']) for d in BKM], key=lambda t:t[1]):
 ##            print'{}: {}'.format(id,station,metric,eco)
 ##        active = False
-
-##    if user_says_2 == '2'
+##
+####    if user_says_2 == '2'
         
 
 

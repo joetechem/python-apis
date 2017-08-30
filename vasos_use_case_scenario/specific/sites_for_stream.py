@@ -1,7 +1,7 @@
 """
 Use API to find sites for stream
 
-"Show my all site names with corresponding id's"
+"Show all my site names with corresponding id's"
 
 """
 
@@ -25,12 +25,12 @@ r = requests.get(url)
 streams = r.json()
 
 # Returns sorted (by name) and flattened
-#for id, name in sorted([(d['id'],d['name']) for d in streams], key=lambda t:t[1]):
-#    print'{}: {}'.format(id,name)
+for id, name in sorted([(d['id'],d['name']) for d in streams], key=lambda t:t[1]):
+    print'{}: {}'.format(id,name)
         
 # save for possible if statement
-l_comprehension = [d for d in streams if d['name'] == 'Buck Mountain Creek']
-print(l_comprehension)
+#l_comprehension = [d for d in streams if d['name'] == 'Buck Mountain Creek']
+#print(l_comprehension)
 
 # Works! Prints out every stream name
 #for d in streams:
