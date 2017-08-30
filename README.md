@@ -17,7 +17,8 @@ Local Python Client Testing for VASOS to prep potential Alexa Skill
 
 * vasos_use_case_scenario  
   - Setting realistic goals and attempting to reach them.  
-  - Refining work with the response dictionaries to make sense for an Alexa Skill. 
+  - Refining work with the response dictionaries to make sense for an Alexa Skill.  
+  - More info found in docstrings in the py files.  
   
 * vasos_salt_tests  
   - Sporadic tests on working with response dictionaries.  
