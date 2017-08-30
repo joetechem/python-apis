@@ -37,17 +37,50 @@ buck_mtn_sites_url = 'https://wva-dev.sosdata.org/sites.json?association=sites&p
 r = requests.get(buck_mtn_sites_url)
 buck_mtn_sites_data = r.json()
 
-print "\nShowing list of site data for streams in Albemarle county, sorted by station identifier:"
-for id, name in sorted([(d['id'],d['station_identifier']) for d in sites], key=lambda t:t[1]):
-    print'{}: {}'.format(id,name)
+
+def all_site_data():
+    print "\nShowing list of site data for streams in Albemarle county, sorted by station identifier:"
+    for id, name in sorted([(d['id'],d['station_identifier']) for d in sites], key=lambda t:t[1]):
+        print'{}: {}'.format(id,name)
+# uncomment to show site data
+#site_data()
 
 
-######### 2 ######## site data for that stream 
+######### 2 ######## site data for that stream
+# This time testing with user input
+user_says = raw_input("Type 'y' to show site data for Buck Mountain Creek: ")
+if user_says == 'y':
+    def buck_site_data():
+        print "\nShowing list of site data for Buck Mountain Creek, sorted by station identifier:"
+        for id, name in sorted([(d['id'],d['station_identifier']) for d in buck_mtn_sites_data], key=lambda t:t[1]):
+            print'{}: {}'.format(id,name)
+buck_site_data()
 
+
+    # 8/30 currently returns same as above. taking a break.
+    # Probably need to call to more nested instead of same data as in 2, above
+
+##active = True
+##while active:
+##    user_says_2 = raw_input("\nType 'a' to show site data for BKM01" +
+##                        ", 'b' for BKU03" +
+##                        ", or 'c' for BKM1" +
+##                        ", 'q' to quit: ")
+##    if user_says_2 == 'a':
+##        buck_mtn_creek = [d for d in sites if d['station_identifier'] == 'BKM01']
+##        for id, station, metric, eco in sorted([(d['id'],d['station_identifier'],d['multi_metric_score'],d['ecological_conditions']) for d in buck_mtn_creek], key=lambda t:t[1]):
+##            print'{}: {}'.format(id,station,metric,eco)
+##        active = False
+##    if user_says_2 == '2'
+        
+
+
+    
+    
 
 # py list comprehension
 # Test for retrieving specific site data
-buck_mtn_creek = [d for d in sites if d['station_identifier'] == 'BKM01']
+#buck_mtn_creek = [d for d in sites if d['station_identifier'] == 'BKM01']
 
 # uncomment to show BKMO1 site data
 #print buck_mtn_creek
