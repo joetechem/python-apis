@@ -18,4 +18,6 @@ print("\nShowing sorted list of streams and their corresponding id's in alphabet
 for id, name in sorted([(d['id'],d['name']) for d in streams], key=lambda t:t[1]):
     print'{}: {}'.format(id,name)
 
+print("\nTotal number of streams in Albemarle county: " + str(len(streams)))
+
 
