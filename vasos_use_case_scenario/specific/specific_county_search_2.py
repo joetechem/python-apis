@@ -7,6 +7,8 @@ API to get specific data from wva-dev.sosdata.org
 
 Testing a simple use-case.
 
+*** With local input ***
+
 Trying out different api calls: first, at top of parent (or lowest child?);
                                 Second, then more sepcific calls.
 

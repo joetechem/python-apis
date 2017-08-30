@@ -1,3 +1,7 @@
+"""
+Looking for best way to return the data a user requests.
+"""
+
 import requests
 import json
 
